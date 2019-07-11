@@ -25,3 +25,5 @@ add_executable(kmb
     ${COMMAND_SRC}
     ${EXPERIMENT_SRC}
 )
+
+add_executable(test_shuffle tests/shufflet.cpp)
