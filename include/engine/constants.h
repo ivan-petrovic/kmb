@@ -12,6 +12,8 @@ public:
     static const unsigned int MAX3;
     static const unsigned int MAX2;
     static const unsigned int MAX1;
+
+    static const unsigned int VISITED;
 };
 
 #endif // __CONSTANTS_H__ 

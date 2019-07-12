@@ -16,6 +16,8 @@ const unsigned int constants::MAX6 = MAX5 * (MAX_NUMBER - 5) / 6;
 
 const unsigned int constants::MAX7 = MAX6 * (MAX_NUMBER - 6) / 7;
 
+const unsigned int constants::VISITED = 0;
+
 /*
 #include <iostream>
 

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 #ifndef __KMB_H__
 #define __KMB_H__
@@ -33,7 +34,11 @@ public:
 
     kmb intersection(kmb k2) const;
 
+    void get_numbers(std::vector<unsigned char> & v);
+
     unsigned long long raw() const;
+
+    bool operator<(const kmb& k) const;
 };
 
 std::ostream& operator << (std::ostream& os, kmb k);

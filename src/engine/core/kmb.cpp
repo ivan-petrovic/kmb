@@ -72,6 +72,15 @@ unsigned long long kmb::raw() const {
     return numbers;
 }
 
+bool kmb::operator<(const kmb& k) const {
+    return numbers < k.numbers;
+}
+void kmb::get_numbers(std::vector<unsigned char> & v) {
+    for (unsigned char i = 0; i <= constants::MAX_NUMBER; i += 1) {
+        if(check(i)) v.push_back(i);
+    }
+}
+
 std::ostream& operator << (std::ostream& os, kmb k) {
     for (int i = 0; i <= constants::MAX_NUMBER; i += 1) {
         if(k.check(i)) os << std::setw(3) << i;

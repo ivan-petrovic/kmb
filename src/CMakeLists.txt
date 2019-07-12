@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 11)
 project(KMB VERSION 0.2 LANGUAGES CXX)
 
 # Bring the headers into the project
-include_directories(include)
+include_directories(../include)
 
 # Can manually add the sources using the set command as follows:
 # set(SOURCES src/mainapp.cpp src/Student.cpp)
@@ -26,4 +26,7 @@ add_executable(kmb
     ${EXPERIMENT_SRC}
 )
 
-add_executable(test_shuffle tests/shufflet.cpp)
+add_executable(test_shuffle ../tests/shufflet.cpp)
+add_executable(test_constants ../tests/constantst.cpp ${E_SRC})
+add_executable(test_set4 ../tests/set_of_4s_t.cpp ${E_CORE_SRC} ${E_SRC})
+add_executable(test_all7 ../tests/all7s_t.cpp ${E_CORE_SRC} ${E_SRC})
